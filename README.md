@@ -12,15 +12,25 @@ I have built a noise generator who generates noise in 2.4ghz and jam it. It uses
 and some jumpers
 
 # Connections:
+
 Sda - 8
+
 Scl - 9
+
 Sck - 5
+
 Mosi - 6
+
 Miso - 7
+
 btn - 2
+
 Ce 1 - 0
+
 ce 2 - 1
+
 csn 1 - 3
+
 csn 2 - 4
 
 Preview Video: https://files.slack.com/files-tmb/T09V59WQY1E-F0C9NB0SNCV-7caa31acb4/try_video_of_hardware_1.mp4
