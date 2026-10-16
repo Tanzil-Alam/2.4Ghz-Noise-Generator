@@ -8,6 +8,6 @@ Used components,
 1x capacitor
 Some jumper wires, and a breadboard.
 
-Preview Video: 
+Preview Video: https://files.slack.com/files-tmb/T09V59WQY1E-F0C9NB0SNCV-7caa31acb4/try_video_of_hardware_1.mp4
 
 <img width="720" height="458" alt="image11111111111111111" src="https://github.com/user-attachments/assets/a423042b-e966-4284-8b76-1022c301a819" />
