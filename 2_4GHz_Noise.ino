@@ -22,11 +22,11 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 #define NRF_MOSI  6
 #define NRF_MISO  7
 
-#define PIN_SELECT 2
+#define PIN_SELECT 2 //for start running and stop running
 
 SPIClass *sp = nullptr;
 SPIClass *hp = nullptr;
-RF24 radio(3, 4, 16000000);
+RF24 radio(3, 4, 16000000); //16000000hz of noiseeeee
 RF24 radio1(0, 1, 16000000);
 
 bool radio1OK = false, radio2OK = false;
@@ -42,15 +42,15 @@ void two() {
   else if ((ch < 2) && (flag == 1)) flag = 0;
   radio.setChannel(ch);
   radio1.setChannel(ch1);
-}
+} //channel settingss
 
-void one() {
+void one() { 
   radio1.setChannel(random(80));
   radio.setChannel(random(80));
-  delayMicroseconds(random(60));
+  delayMicroseconds(random(60)); // jams every channel for wifi and bt
 }
 
-void initSP() {
+void initSP() { //Serial monitor status
   sp = &SPI;
   if (radio1.begin(sp)) {
     Serial.println("VSPI Jammer Started !!!");
@@ -64,7 +64,7 @@ void initSP() {
     radio1.startConstCarrier(RF24_PA_MAX, ch1);
     radio2OK = true;
   } else {
-    Serial.println("VSPI Jammer couldn't start !!!");
+    Serial.println("VSPI Jammer couldn't start !!!"); // Here 2 type of jammer, one is vspi
     radio2OK = false;
   }
 }
@@ -72,7 +72,7 @@ void initSP() {
 void initHP() {
   hp = &SPI;
   if (radio.begin(hp)) {
-    Serial.println("HSPI Started !!!");
+    Serial.println("HSPI Started !!!"); // Other is Hspi
     radio.setAutoAck(false);
     radio.stopListening();
     radio.setRetries(0, 0);
@@ -154,7 +154,7 @@ void setup() {
   initHP();
   initSP();
 
-  runPureJammingLoop();
+  runPureJammingLoop(); //Pure jamming loop
 }
 
 void loop() {
