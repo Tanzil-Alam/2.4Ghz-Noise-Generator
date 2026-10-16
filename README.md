@@ -1,14 +1,24 @@
 # 2.4Ghz-Noise-Generator
 I have built a noise generator who generates noise in 2.4ghz and jam it. It uses 16000000hz noise to jam, and it has 2x nrf for Vspi and Hspi jamming. it jams all channels needed for Wifi and Bluetooth. I just made it for ethical purpose and only use in my devices, I will never use it with anyone else without permission, i know that its illegal.
 
+# Components:
+
 #Used components, (Main)
+
 2x Nrf24l01
+
 1x 0.96" oled
+
 1x Esp32 c3 zero
 
+
+
 #Used components (Extra)
+
 1x Capacitor
+
 1x Breadboard
+
 and some jumpers
 
 # Connections:
